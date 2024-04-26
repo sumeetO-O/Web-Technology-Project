@@ -1,0 +1,136 @@
+<!--
+    TOPIC - "WORK WITH DATES IN JS"
+    SUBJECT - "WEB TECHNOLOGY"
+    NAME - "SUMEET KUMAR"
+    CLASS - "ECE-A (3rd yr)"
+    ROLL - 21BEC106
+    REG. NO. - 711521BEC106
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Work With Dates</title>
+</head>
+<body>
+  
+<div class="box">
+
+<div>
+    <p id="tdydate">Today's Date : </p>
+</div>
+
+<h1>Age Calculator</h1>
+ 
+<label for="date">Select your D.O.B ( Date of Birth )</label><br />
+
+<input type="date" name="DOB" id="date" required>
+
+<input type="submit" value="CALCULATE" id="calculateBtn"> 
+
+<p id="result"></p> 
+
+</div>
+
+
+
+
+<script>
+    
+let userInput = document.getElementById("date");
+
+let tdyDate = document.getElementById("tdydate");
+
+let tdy = new Date();
+
+tdyDate.innerHTML = "Today's Date : " + tdy.getDate() + "-" + tdy.getMonth() + "-" + tdy.getFullYear();
+
+userInput.max=new Date().toISOString().split("T")[0];
+
+let btn = document.getElementById("calculateBtn");
+
+let result = document.getElementById("result");
+
+btn.addEventListener("click",calculateAge);
+
+function calculateAge() {
+
+if(userInput.value === "") {
+alert("Please Select Date");
+document.getElementById("date").autofocus="autofocus";   
+}
+
+else {
+getAge();  
+}
+
+}
+
+function getAge() {
+
+let birthDate = new Date(userInput.value) 
+
+let d1 = birthDate.getDate(); 
+let m1 = birthDate.getMonth();
+let y1 = birthDate.getFullYear();
+
+let today = new Date();
+
+let d2 = today.getDate();
+let m2 = today.getMonth();
+let y2 = today.getFullYear();
+
+//year Difference
+
+let year = y2 - y1;
+
+//Month Difference
+
+let month;
+
+if(m2 >= m1) {
+month = m2 - m1;    
+}
+
+else {
+year --;
+month = 12 + m2 - m1;    
+}
+
+//days Difference
+
+let date;
+
+if(d2 >= d1) {
+date = d2 - d1 ;  
+}
+
+else {
+month --;
+d3 = daysInMonth(y1,m1);
+date = d3 + d2 - d1;  
+}
+
+//case when month goes negative
+
+if(month<0) {
+month = 11;   
+year--;
+}
+
+function daysInMonth(year,month){
+return new Date(year,month,0).getDate();  
+}
+
+result.innerHTML=
+`You are ${year} years , 
+ ${month} months <br> and 
+ ${date} days old.`
+ 
+}
+    
+    
+</script>
+
+</body>
+</html>
