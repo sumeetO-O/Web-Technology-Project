@@ -1,0 +1,76 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-color:#fff;
+    text-align:center ;
+}
+
+#tdydate{
+    font-family: monospace;
+    font-weight:bold;
+}
+
+.box{
+    width:90%;
+    max-width:600px; 
+    height:auto;
+    background-color:#256;
+    border:2px solid #267;
+    border-radius:5px;
+    margin:35% auto;
+    padding:20px 10px;
+    box-shadow:5px 5px 10px #aaa;
+}
+
+h1{
+    color:#ff0;
+    margin:20px auto;
+    text-decoration:underline ;
+}
+
+label{
+    font-weight:700;
+    color:#fff;
+}
+
+input[type="date"]{
+    padding:10px;
+    margin:10px auto;
+    width:80%;
+    text-align:center ;
+    font-weight:700;
+    font-size:24px;
+    color:green;
+    border-radius:4px;
+    border:2px solid #fff;
+    outline-color:green;
+}
+
+input[type="submit"]{
+    padding:10px;
+    margin:10px auto;
+    width:80%;
+    border-radius:4px;
+    border:2px solid #fff;
+    outline:2px solid #256;
+    font-size:18px;
+    font-weight:700;
+    color:#fff;
+    background-color:#256;
+}
+
+input[type="submit"]:active{
+    border:2px solid #256;
+    outline:2px solid #fff;
+    color:#256;
+    background-color:#fff;
+}
+
+p{
+    font-size:22px;
+    color:#3fd;
+    margin:20px auto;
+}
