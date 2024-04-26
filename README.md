@@ -7,3 +7,5 @@ For Web Tech subject (CIA-3)
 **REG. NO.** - 711521BEC106  
 **TOPIC** - "WORK WITH DATES IN JS"  
 **SUBJECT** - "WEB TECHNOLOGY"
+
+link for preview - https://sumeeto-o.github.io/Web-Technology-Project/
